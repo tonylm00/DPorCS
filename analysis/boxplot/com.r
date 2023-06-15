@@ -20,7 +20,7 @@ col_legenda <- col_boxplot
 
 # Genera il boxplot unendo tutti i gruppi
 png("out/boxplot_comp.png", width = larghezza, height = altezza, units = "in", res = dpi)
-boxplot(dati, names = c("DP-CS", "DP", "CS", "NO"), 
+boxplot(dati, names = c("A", "B", "C", "D"), 
         main = "Comprensione", ylab = "Risposte corrette", col = col_boxplot)
 
 axis(2, at = seq(0, max(unlist(dati)), by = 0.5), 
@@ -29,6 +29,6 @@ axis(2, at = seq(0, max(unlist(dati)), by = 0.5),
                      format(seq(0, max(unlist(dati)), by = 0.5), nsmall = 1)))
 
 # Aggiungi la legenda
-legend("topright", legend = c("DP-CS", "DP", "CS", "NO"), fill = col_legenda)
+legend("topright", legend = c("A", "B", "C", "D"), fill = col_legenda)
 
 dev.off()
